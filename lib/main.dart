@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:instagram_ui_app/data/constants/custom_color.dart';
 import 'package:instagram_ui_app/ui/screens/login_screen.dart';
+import 'package:instagram_ui_app/ui/screens/switch_account_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +15,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        textTheme: TextTheme(
+          displayMedium: TextStyle(
+              color: CustomColor.white, fontFamily: 'GB', fontSize: 16),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            textStyle: MaterialStateProperty.all(
+              const TextStyle(
+                  fontFamily: 'GB', fontSize: 14, color: CustomColor.white),
+            ),
+            shape: MaterialStateProperty.all(
+              const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
+              ),
+            ),
+            backgroundColor: MaterialStateProperty.all(CustomColor.pink),
+          ),
+        ),
+      ),
       home: Container(
         width: double.infinity,
         height: double.infinity,
@@ -70,11 +93,13 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Text(
                 'From',
-                style: TextStyle(color: CustomColor.grey, fontSize: 10),
+                style: TextStyle(
+                    color: CustomColor.grey, fontSize: 10, fontFamily: 'GB'),
               ),
               Text(
                 'Expert Flutter',
-                style: TextStyle(color: CustomColor.blue, fontSize: 12),
+                style: TextStyle(
+                    color: CustomColor.blue, fontSize: 12, fontFamily: 'GB'),
               ),
             ],
           ),
@@ -90,7 +115,7 @@ class _SplashScreenState extends State<SplashScreen> {
         return Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const LoginScreen(),
+            builder: (context) => const SwitchAccountScreen(),
           ),
         );
       },
