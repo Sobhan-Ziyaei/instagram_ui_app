@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:instagram_ui_app/data/constants/custom_color.dart';
+import 'package:instagram_ui_app/ui/screens/login_screen.dart';
 
 class SwitchAccountScreen extends StatelessWidget {
   const SwitchAccountScreen({Key? key}) : super(key: key);
@@ -83,7 +84,14 @@ class SwitchAccountScreen extends StatelessWidget {
                               child: ElevatedButton(
                                 style:
                                     Theme.of(context).elevatedButtonTheme.style,
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const LoginScreen(),
+                                    ),
+                                  );
+                                },
                                 child: const Text(
                                   'Confirm',
                                   style: TextStyle(
