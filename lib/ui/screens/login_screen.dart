@@ -89,6 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 44),
                   child: TextField(
+                    style: Theme.of(context).textTheme.displayMedium,
                     focusNode: emailFocusNode,
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.symmetric(
@@ -124,6 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 44),
                   child: TextField(
+                    style: Theme.of(context).textTheme.displayMedium,
                     focusNode: passwordFocusNode,
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.symmetric(
