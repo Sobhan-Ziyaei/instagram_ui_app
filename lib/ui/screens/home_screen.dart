@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height / 2.55,
                   child: Image.asset(
-                    'assets/images/paris.jpg',
+                    'assets/images/item1.png',
                   ),
                 ),
               ),
