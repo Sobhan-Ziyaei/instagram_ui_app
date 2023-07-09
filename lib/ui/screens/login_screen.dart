@@ -4,6 +4,7 @@ import 'package:instagram_ui_app/ui/screens/activity_screen.dart';
 import 'package:instagram_ui_app/ui/screens/add_post_screen.dart';
 import 'package:instagram_ui_app/ui/screens/home_screen.dart';
 import 'package:instagram_ui_app/ui/screens/search_screen.dart';
+import 'package:instagram_ui_app/ui/screens/user_profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -170,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ActivityScreen(),
+                          builder: (context) => const UserProfileScreen(),
                         ),
                       );
                     },
